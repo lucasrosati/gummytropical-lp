@@ -20,7 +20,7 @@ export default function Lifestyle() {
           </div>
 
           {/* Text */}
-          <div>
+          <div className="text-center lg:text-left">
             <h2 className="font-heading text-2xl lg:text-[68px] lg:leading-[79px] font-light text-brand-text">
               Às vezes tudo que você precisa é de{" "}
               <br className="hidden lg:block" />

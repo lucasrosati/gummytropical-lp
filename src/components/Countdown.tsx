@@ -2,16 +2,19 @@
 
 import { useState, useEffect } from "react";
 
-const TARGET = new Date("2026-04-08T23:59:59-03:00");
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 function calcTimeLeft() {
-  const diff = TARGET.getTime() - Date.now();
-  if (diff <= 0) return { dias: 0, horas: 0, min: 0, seg: 0 };
+  const now = Date.now();
+  const startOfDay = new Date(now);
+  startOfDay.setHours(0, 0, 0, 0);
+  const elapsed = now - startOfDay.getTime();
+  const remaining = DAY_MS - elapsed;
   return {
-    dias: Math.floor(diff / 86400000),
-    horas: Math.floor((diff % 86400000) / 3600000),
-    min: Math.floor((diff % 3600000) / 60000),
-    seg: Math.floor((diff % 60000) / 1000),
+    dias: remaining >= DAY_MS ? 1 : 0,
+    horas: Math.floor((remaining % DAY_MS) / 3600000),
+    min: Math.floor((remaining % 3600000) / 60000),
+    seg: Math.floor((remaining % 60000) / 1000),
   };
 }
 
