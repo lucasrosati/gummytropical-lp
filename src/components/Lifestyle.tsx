@@ -41,8 +41,11 @@ export default function Lifestyle() {
             </p>
             <button
               onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-                setTimeout(() => document.getElementById("nome")?.focus(), 600);
+                const input = document.getElementById("nome") as HTMLInputElement | null;
+                if (input) {
+                  input.focus();
+                  input.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
               }}
               className="mt-8 lg:mt-10 inline-block rounded-[56px] px-10 lg:px-16 py-4 lg:py-5 font-heading font-semibold text-brand-cta-text text-base lg:text-[23px] transition-transform hover:scale-[1.02] cursor-pointer"
               style={{
