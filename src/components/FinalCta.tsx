@@ -48,12 +48,12 @@ export default function FinalCta() {
           <span className="font-bold gradient-text">PRIMEIRA</span> a receber tudo isso!
         </h2>
 
-        {/* Benefit cards */}
-        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+        {/* Benefit cards — horizontal scroll on mobile, grid on desktop */}
+        <div className="mt-10 flex lg:grid lg:grid-cols-4 gap-4 lg:gap-5 overflow-x-auto lg:overflow-visible snap-x snap-mandatory -mx-5 px-5 lg:mx-0 lg:px-0 scrollbar-hide">
           {vipBenefits.map((benefit) => (
             <div
               key={benefit.title}
-              className="rounded-[17px] p-5 lg:p-6 text-left"
+              className="rounded-[17px] p-5 lg:p-6 text-left min-w-[70vw] sm:min-w-[260px] lg:min-w-0 snap-start flex-shrink-0 lg:flex-shrink"
               style={{ border: "0.72px solid #FF9F40", background: "rgba(255,255,255,0.05)" }}
             >
               {benefit.icon === "svg" ? (

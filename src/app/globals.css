@@ -22,6 +22,14 @@ body {
   animation: tick 0.3s ease-out;
 }
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .gradient-text {
   background: linear-gradient(135deg, #FE008E 0%, #FFA200 100%);
   -webkit-background-clip: text;
