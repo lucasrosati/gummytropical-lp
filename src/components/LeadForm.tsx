@@ -9,9 +9,23 @@ export default function LeadForm() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
+  const [errors, setErrors] = useState<{ email?: string; telefone?: string }>({});
+
+  function validate(): boolean {
+    const newErrors: { email?: string; telefone?: string } = {};
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) {
+      newErrors.email = "Informe um e-mail válido. Ex: nome@email.com";
+    }
+    if (!/^\d{11}$/.test(telefone.replace(/\D/g, ""))) {
+      newErrors.telefone = "Informe DDD + 9 dígitos. Ex: 81988305738";
+    }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  }
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
+    if (!validate()) return;
     setStatus("loading");
     try {
       const res = await fetch("/api/leads", {
@@ -67,6 +81,7 @@ export default function LeadForm() {
 
       <div className="space-y-4 lg:space-y-5 mb-6 lg:mb-8">
         <input
+          id="nome"
           type="text"
           placeholder="Nome:"
           value={nome}
@@ -74,22 +89,28 @@ export default function LeadForm() {
           required
           className="w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-6 font-heading text-base lg:text-[26px] text-brand-text placeholder:text-[#CBCBCB] outline-none"
         />
-        <input
-          type="text"
-          placeholder="E-mail:"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          className="w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-6 font-heading text-base lg:text-[26px] text-brand-text placeholder:text-[#CBCBCB] outline-none"
-        />
-        <input
-          type="tel"
-          placeholder="Telefone:"
-          value={telefone}
-          onChange={(e) => setTelefone(e.target.value)}
-          required
-          className="w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-6 font-heading text-base lg:text-[26px] text-brand-text placeholder:text-[#CBCBCB] outline-none"
-        />
+        <div>
+          <input
+            type="text"
+            placeholder="E-mail:"
+            value={email}
+            onChange={(e) => { setEmail(e.target.value); setErrors((prev) => ({ ...prev, email: undefined })); }}
+            required
+            className={`w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-6 font-heading text-base lg:text-[26px] text-brand-text placeholder:text-[#CBCBCB] outline-none ${errors.email ? "ring-2 ring-red-400" : ""}`}
+          />
+          {errors.email && <p className="mt-1 text-sm text-white/90">{errors.email}</p>}
+        </div>
+        <div>
+          <input
+            type="tel"
+            placeholder="Telefone:"
+            value={telefone}
+            onChange={(e) => { setTelefone(e.target.value); setErrors((prev) => ({ ...prev, telefone: undefined })); }}
+            required
+            className={`w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-6 font-heading text-base lg:text-[26px] text-brand-text placeholder:text-[#CBCBCB] outline-none ${errors.telefone ? "ring-2 ring-red-400" : ""}`}
+          />
+          {errors.telefone && <p className="mt-1 text-sm text-white/90">{errors.telefone}</p>}
+        </div>
       </div>
 
       <button

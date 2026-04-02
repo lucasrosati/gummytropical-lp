@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 const vipBenefits = [
@@ -82,17 +84,18 @@ export default function FinalCta() {
           ))}
         </div>
 
-        <a
-          href="https://sndflw.com/i/promogummy"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-10 inline-block rounded-[56px] px-12 lg:px-16 py-4 lg:py-5 font-heading font-semibold text-brand-cta-text text-base lg:text-[23px] transition-transform hover:scale-[1.02]"
+        <button
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+            setTimeout(() => document.getElementById("nome")?.focus(), 600);
+          }}
+          className="mt-10 inline-block rounded-[56px] px-12 lg:px-16 py-4 lg:py-5 font-heading font-semibold text-brand-cta-text text-base lg:text-[23px] transition-transform hover:scale-[1.02] cursor-pointer"
           style={{
             background: "linear-gradient(135deg, #FE008E 0%, #FFA200 100%)",
           }}
         >
           QUERO SER VIP
-        </a>
+        </button>
 
         <p className="mt-8 font-body text-sm lg:text-[17.6px] lg:leading-[32px] text-brand-text max-w-[1002px] mx-auto">
           Os acessos VIP são <span className="font-bold">restritos</span> e o grupo será fechado em breve. Garanta sua vaga antes que as inscrições se encerrem.

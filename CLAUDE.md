@@ -18,13 +18,13 @@ Landing page for "Gummy Hair Tropical" product launch — a lead-capture page in
 Header → Hero → Countdown → Lifestyle → ProductShowcase → Benefits → FinalCta → Footer
 
 **Lead capture flow:**
-- `src/components/LeadForm.tsx` — client component with form state, posts to `/api/leads`
-- `src/app/api/leads/route.ts` — API route that validates and inserts leads
-- `src/lib/db.ts` — better-sqlite3 database stored at `data/leads.db` (WAL mode). The `data/` directory is created automatically at runtime.
+- `src/components/LeadForm.tsx` — client component with form state (idle/loading/success/error), posts to `/api/leads`
+- `src/app/api/leads/route.ts` — API route that validates `{ nome, email, telefone }` and inserts into Supabase. Error messages are in Portuguese.
+- `src/lib/db.ts` — Supabase client (`@supabase/supabase-js`) with `insertLead`, `getAllLeads`, `deleteAllLeads` functions. Requires `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` env vars. Table: `leads` (id, nome, email, telefone, created_at).
 
-**Fonts:** Plus Jakarta Sans (`font-heading`) and Poppins (`font-body`), loaded via `next/font/google` in `layout.tsx`. Referenced in Tailwind config as CSS variables.
+**Fonts:** Plus Jakarta Sans (`font-heading`, var `--font-jakarta`) and Poppins (`font-body`, var `--font-poppins`), loaded via `next/font/google` in `layout.tsx`. Referenced in Tailwind config as CSS variables.
 
-**Design tokens:** Brand colors, shadows, and border-radius defined in `tailwind.config.ts` under `theme.extend`. Key namespace is `brand-*` (e.g., `bg-brand-bg`, `text-brand-cta`).
+**Design tokens:** Brand colors, shadows, and border-radius defined in `tailwind.config.ts` under `theme.extend`. Key namespace is `brand-*` (e.g., `bg-brand-bg`, `text-brand-cta`). Notable gradients use inline styles (pink `#FE008E` to orange `#FFA200`).
 
 **Path alias:** `@/*` maps to `./src/*`.
 
