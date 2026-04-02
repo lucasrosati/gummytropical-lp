@@ -49,7 +49,7 @@ export default function FinalCta() {
         </h2>
 
         {/* Benefit cards — horizontal scroll on mobile, grid on desktop */}
-        <div className="mt-10 flex lg:grid lg:grid-cols-4 gap-4 lg:gap-5 overflow-x-auto lg:overflow-visible snap-x snap-mandatory -mx-5 px-5 lg:mx-0 lg:px-0 scrollbar-hide">
+        <div className="mt-10 flex lg:grid lg:grid-cols-4 gap-4 lg:gap-5 overflow-x-auto lg:overflow-visible snap-x snap-mandatory -mx-5 px-5 pb-1 lg:mx-0 lg:px-0 lg:pb-0 scrollbar-hide">
           {vipBenefits.map((benefit) => (
             <div
               key={benefit.title}
