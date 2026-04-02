@@ -57,7 +57,6 @@ export default function LeadForm() {
         </p>
         <a
           href="https://sndflw.com/i/promogummy"
-          target="_blank"
           rel="noopener noreferrer"
           className="inline-block w-full rounded-[58px] bg-brand-cta px-8 py-5 text-center font-heading font-semibold text-brand-cta-text text-lg transition-transform hover:scale-[1.02]"
         >
