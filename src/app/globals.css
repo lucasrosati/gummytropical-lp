@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #7A5C45;
+  background: #FFF8F1;
+}
+
+@keyframes tick {
+  0% {
+    transform: scale(1.12);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.countdown-digit {
+  animation: tick 0.3s ease-out;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #FE008E 0%, #FFA200 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

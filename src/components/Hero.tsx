@@ -1,0 +1,40 @@
+import Image from "next/image";
+import LeadForm from "./LeadForm";
+
+export default function Hero() {
+  return (
+    <section className="bg-brand-bg py-8 lg:py-[113px]">
+      <div className="mx-auto max-w-[1920px] px-5 lg:px-[176px]">
+        <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start gap-10 lg:gap-12">
+          {/* Left — Headline (max 784px) */}
+          <div className="lg:max-w-[784px] lg:flex-shrink-0">
+            <h1 className="font-heading text-[2rem] lg:text-[68px] font-extrabold leading-[1.15] lg:leading-[79px] text-brand-headline">
+              Tropical não é um lugar, é um estado de espírito de quem cuida de
+              si com leveza.
+            </h1>
+            <p className="mt-6 lg:mt-10 font-body text-sm lg:text-[28.6px] lg:leading-[38px] font-light text-brand-text max-w-[620px]">
+              A nova Gummy chegando com um sabor que transforma! Cadastre-se e
+              seja a primeira a saber.
+            </p>
+
+            {/* Social proof icons */}
+            <div className="mt-8 lg:mt-14">
+              <Image
+                src="/images/social-icons.svg"
+                alt="Siga nas redes sociais"
+                width={507}
+                height={142}
+                className="w-[250px] lg:w-[507px] h-auto"
+              />
+            </div>
+          </div>
+
+          {/* Right — Form (647px) */}
+          <div className="w-full lg:w-[647px] lg:flex-shrink-0">
+            <LeadForm />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
