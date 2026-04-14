@@ -75,7 +75,7 @@ export default function LeadForm() {
       }}
     >
       <h2 className="font-heading text-2xl lg:text-[46px] lg:leading-[69px] font-bold text-white mb-6 lg:mb-8">
-        Vagas VIP limitadas
+        ACESSO ANTECIPADO
       </h2>
 
       <div className="space-y-4 lg:space-y-5 mb-6 lg:mb-8">
