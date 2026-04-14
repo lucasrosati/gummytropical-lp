@@ -44,8 +44,8 @@ export default function FinalCta() {
     <section className="bg-white py-14 lg:py-16">
       <div className="mx-auto max-w-[1240px] px-5 lg:px-12 text-center">
         <h2 className="font-heading text-xl lg:text-[41px] lg:leading-[62px] font-normal text-brand-text max-w-[847px] mx-auto">
-          Entre para o <span className="font-bold gradient-text">GRUPO VIP</span> e garanta que seja a{" "}
-          <span className="font-bold gradient-text">PRIMEIRA</span> a receber tudo isso!
+          Acesse o  <span className="font-bold gradient-text">GRUPO VIP</span> e garanta seu novo ritual em{" "}
+          <span className="font-bold gradient-text">PRIMEIRA MÃO</span>
         </h2>
 
         {/* Benefit cards — horizontal scroll on mobile, grid on desktop */}

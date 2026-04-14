@@ -22,7 +22,7 @@ export default function Lifestyle() {
           {/* Text */}
           <div className="text-center lg:text-left">
             <h2 className="font-heading text-2xl lg:text-[68px] lg:leading-[79px] font-light text-brand-text">
-              Às vezes tudo que você precisa é de{" "}
+              Você não precisa esperar as férias para viver{" "}
               <br className="hidden lg:block" />
               <span
                 className="font-extrabold"
@@ -33,11 +33,11 @@ export default function Lifestyle() {
                   backgroundClip: "text",
                 }}
               >
-                uma pausa tropical.
+                um momento de paraíso.
               </span>
             </h2>
             <p className="mt-6 lg:mt-8 font-body text-sm lg:text-[24px] lg:leading-[37px] font-light text-brand-text max-w-[702px]">
-              A Gummy Hair Frutas Tropicais nasceu pra isso. Não é só um sabor, é uma micro-escapatória. Duas gominhas por dia que transformam a rotina de cuidados num momento que você genuinamente espera. Porque a aderência começa no prazer.
+              A Gummy Frutas Tropicais é o seu convite diário para pausar, respirar e se cuidar com leveza. Mais do que um novo sabor, é uma experiência sensorial que transforma sua rotina de cuidados no momento mais esperado do dia. Porque se cuidar deve ser um prazer, não uma obrigação.
             </p>
             <button
               onClick={() => {
@@ -52,7 +52,7 @@ export default function Lifestyle() {
                 background: "linear-gradient(135deg, #FE008E 0%, #FFA200 100%)",
               }}
             >
-              QUERO SER VIP
+              QUERO ME CUIDAR!
             </button>
           </div>
         </div>

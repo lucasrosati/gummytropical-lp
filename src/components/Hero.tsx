@@ -9,12 +9,10 @@ export default function Hero() {
           {/* Left — Headline (max 784px) */}
           <div className="lg:max-w-[784px] lg:flex-shrink-0 text-center lg:text-left">
             <h1 className="font-heading text-[2rem] lg:text-[68px] font-extrabold leading-[1.15] lg:leading-[79px] text-brand-headline">
-              Tropical não é um lugar, é um estado de espírito de quem cuida de
-              si com leveza.
+              O SEU PARAÍSO TROPICAL NO MEIO DA ROTINA.
             </h1>
             <p className="mt-6 lg:mt-10 font-body text-sm lg:text-[28.6px] lg:leading-[38px] font-light text-brand-text max-w-[620px] mx-auto lg:mx-0">
-              A nova Gummy chegando com um sabor que transforma! Cadastre-se e
-              seja a primeira a saber.
+              Uma pausa de pura leveza para os seus dias mais agitados. Garanta o novo sabor antes de todo mundo.
             </p>
 
             {/* Social proof icons */}
