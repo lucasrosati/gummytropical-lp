@@ -74,7 +74,7 @@ export default function LeadForm() {
         background: "linear-gradient(322.56deg, #FE008E -10.7%, #FFA200 97.42%)",
       }}
     >
-      <h2 className="font-heading text-2xl lg:text-[46px] lg:leading-[69px] font-bold text-white mb-6 lg:mb-8">
+      <h2 className="font-heading text-2xl lg:text-[28px] lg:leading-[36px] font-bold text-white mb-6 lg:mb-8">
         ACESSO ANTECIPADO
       </h2>
 
@@ -86,7 +86,7 @@ export default function LeadForm() {
           value={nome}
           onChange={(e) => setNome(e.target.value)}
           required
-          className="w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-6 font-heading text-base lg:text-[26px] text-brand-text placeholder:text-[#CBCBCB] outline-none"
+          className="w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-4 font-heading text-base lg:text-base text-brand-text placeholder:text-[#CBCBCB] outline-none"
         />
         <div>
           <input
@@ -95,7 +95,7 @@ export default function LeadForm() {
             value={email}
             onChange={(e) => { setEmail(e.target.value); setErrors((prev) => ({ ...prev, email: undefined })); }}
             required
-            className={`w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-6 font-heading text-base lg:text-[26px] text-brand-text placeholder:text-[#CBCBCB] outline-none ${errors.email ? "ring-2 ring-red-400" : ""}`}
+            className={`w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-4 font-heading text-base lg:text-base text-brand-text placeholder:text-[#CBCBCB] outline-none ${errors.email ? "ring-2 ring-red-400" : ""}`}
           />
           {errors.email && <p className="mt-1 text-sm text-white/90">{errors.email}</p>}
         </div>
@@ -106,7 +106,7 @@ export default function LeadForm() {
             value={telefone}
             onChange={(e) => { setTelefone(e.target.value); setErrors((prev) => ({ ...prev, telefone: undefined })); }}
             required
-            className={`w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-6 font-heading text-base lg:text-[26px] text-brand-text placeholder:text-[#CBCBCB] outline-none ${errors.telefone ? "ring-2 ring-red-400" : ""}`}
+            className={`w-full rounded-[14px] bg-brand-field px-5 py-5 lg:py-4 font-heading text-base lg:text-base text-brand-text placeholder:text-[#CBCBCB] outline-none ${errors.telefone ? "ring-2 ring-red-400" : ""}`}
           />
           {errors.telefone && <p className="mt-1 text-sm text-white/90">{errors.telefone}</p>}
         </div>
@@ -115,7 +115,7 @@ export default function LeadForm() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="w-full rounded-[58px] bg-brand-cta px-8 py-5 lg:py-6 font-heading font-semibold text-brand-cta-text text-base lg:text-[24px] transition-transform hover:scale-[1.02] disabled:opacity-70 disabled:hover:scale-100"
+        className="w-full rounded-[58px] bg-brand-cta px-8 py-5 lg:py-4 font-heading font-semibold text-brand-cta-text text-base lg:text-lg transition-transform hover:scale-[1.02] disabled:opacity-70 disabled:hover:scale-100"
       >
         {status === "loading" ? "Enviando..." : "QUERO SER A PRIMEIRA"}
       </button>

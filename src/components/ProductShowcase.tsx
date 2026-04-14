@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ProductShowcase() {
   return (
-    <section className="bg-brand-bg overflow-hidden px-5 lg:px-[186px]">
+    <section className="bg-brand-bg overflow-hidden px-5 lg:px-12 mx-auto max-w-7xl">
       {/* Mobile — single image with NOVO badge */}
       <div className="lg:hidden w-full relative">
         <Image
@@ -24,20 +24,20 @@ export default function ProductShowcase() {
       </div>
 
       {/* Desktop — original layout */}
-      <div className="hidden lg:block w-full lg:h-[824px] relative rounded-[44px] overflow-hidden">
+      <div className="hidden lg:block w-full lg:h-[520px] relative rounded-[44px] overflow-hidden">
         <div className="flex flex-row h-full">
           {/* Left — gradient with text */}
           <div
-            className="relative flex-1 p-16 pl-[172px] flex flex-col justify-center"
+            className="relative flex-1 p-16 pl-12 flex flex-col justify-center"
             style={{
               background: "linear-gradient(135deg, #FE008E 0%, #FFA200 100%)",
             }}
           >
-            <h2 className="font-heading text-[85px] leading-[99px] font-light text-white max-w-[760px]">
+            <h2 className="font-heading text-[40px] leading-[48px] font-light text-white max-w-[480px]">
               Fórmula Gummy Hair agora com um{" "}
               <span className="font-bold">sabor especial</span>!
             </h2>
-            <p className="mt-8 font-heading text-[34.6px] leading-[46px] font-normal text-white max-w-[649px]">
+            <p className="mt-8 font-heading text-xl leading-[28px] font-normal text-white max-w-[420px]">
               Os mesmos ativos que você confia. A mesma goma que você ama, mas agora com um sabor que transborda!
             </p>
 

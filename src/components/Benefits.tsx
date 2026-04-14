@@ -21,7 +21,7 @@ const benefits = [
 export default function Benefits() {
   return (
     <section className="bg-brand-bg py-14 lg:py-20">
-      <div className="mx-auto max-w-[1576px] px-5">
+      <div className="mx-auto max-w-5xl px-5">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {benefits.map((benefit) => (
             <div
@@ -40,10 +40,10 @@ export default function Benefits() {
                 />
               </div>
 
-              <h3 className="font-heading text-xl lg:text-[41px] lg:leading-[44px] font-bold gradient-text mb-4 text-center">
+              <h3 className="font-heading text-xl lg:text-2xl lg:leading-[32px] font-bold gradient-text mb-4 text-center">
                 {benefit.title}
               </h3>
-              <p className="font-heading text-sm lg:text-[23px] lg:leading-[39px] font-normal text-brand-text text-center">
+              <p className="font-heading text-sm lg:text-base lg:leading-[26px] font-normal text-brand-text text-center">
                 {benefit.description}
               </p>
             </div>

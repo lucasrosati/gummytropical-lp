@@ -22,14 +22,14 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
   return (
     <div className="flex flex-col items-center gap-2">
       <div
-        className="flex h-[60px] w-[60px] lg:h-[80px] lg:w-[80px] items-center justify-center rounded-[16px] shadow-countdown"
+        className="flex h-[60px] w-[60px] lg:h-[64px] lg:w-[64px] items-center justify-center rounded-[16px] shadow-countdown"
         style={{
           background: "linear-gradient(135deg, #FE008E 0%, #FFA200 100%)",
         }}
       >
         <span
           key={value}
-          className="countdown-digit font-body text-xl lg:text-[28px] font-bold text-white leading-none"
+          className="countdown-digit font-body text-xl font-bold text-white leading-none"
         >
           {String(value).padStart(2, "0")}
         </span>
@@ -43,8 +43,8 @@ function CountdownUnit({ value, label }: { value: number; label: string }) {
 
 function Separator() {
   return (
-    <div className="flex h-[60px] lg:h-[80px] items-center">
-      <span className="font-body text-[24px] lg:text-[30px] font-bold text-brand-headline leading-none">
+    <div className="flex h-[60px] lg:h-[64px] items-center">
+      <span className="font-body text-[24px] lg:text-2xl font-bold text-brand-headline leading-none">
         :
       </span>
     </div>
@@ -62,7 +62,7 @@ export default function Countdown() {
   return (
     <section className="bg-brand-countdown py-10 lg:py-14">
       <div className="mx-auto max-w-7xl px-5 lg:px-12 text-center">
-        <h2 className="font-heading text-2xl lg:text-[68px] lg:leading-[48px] font-extrabold text-brand-headline mb-8 lg:mb-12">
+        <h2 className="font-heading text-2xl lg:text-[32px] lg:leading-[40px] font-extrabold text-brand-headline mb-8 lg:mb-12">
           A espera está quase acabando
         </h2>
         <div className="flex items-start justify-center gap-3 lg:gap-5">
@@ -74,7 +74,7 @@ export default function Countdown() {
           <Separator />
           <CountdownUnit value={time.seg} label="Seg" />
         </div>
-        <p className="mt-8 font-body text-sm lg:text-[24px] lg:leading-[32px] font-light text-brand-text max-w-[635px] mx-auto">
+        <p className="mt-8 font-body text-sm lg:text-base lg:leading-[24px] font-light text-brand-text max-w-[635px] mx-auto">
           Não perca a chance de ser VIP. O grupo fecha assim que as vagas acabarem.
         </p>
       </div>

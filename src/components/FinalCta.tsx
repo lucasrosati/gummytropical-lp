@@ -43,7 +43,7 @@ export default function FinalCta() {
   return (
     <section className="bg-white py-14 lg:py-16">
       <div className="mx-auto max-w-[1240px] px-5 lg:px-12 text-center">
-        <h2 className="font-heading text-xl lg:text-[41px] lg:leading-[62px] font-normal text-brand-text max-w-[847px] mx-auto">
+        <h2 className="font-heading text-xl lg:text-2xl lg:leading-[36px] font-normal text-brand-text max-w-[640px] mx-auto">
           Acesse o  <span className="font-bold gradient-text">GRUPO VIP</span> e garanta seu novo ritual em{" "}
           <span className="font-bold gradient-text">PRIMEIRA MÃO</span>
         </h2>
@@ -92,7 +92,7 @@ export default function FinalCta() {
               input.scrollIntoView({ behavior: "smooth", block: "center" });
             }
           }}
-          className="mt-10 inline-block rounded-[56px] px-12 lg:px-16 py-4 lg:py-5 font-heading font-semibold text-brand-cta-text text-base lg:text-[23px] transition-transform hover:scale-[1.02] cursor-pointer"
+          className="mt-10 inline-block rounded-[56px] px-12 lg:px-10 py-4 font-heading font-semibold text-brand-cta-text text-base transition-transform hover:scale-[1.02] cursor-pointer"
           style={{
             background: "linear-gradient(135deg, #FE008E 0%, #FFA200 100%)",
           }}
